@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   public usuario;
-  public usuarioAutenticado: boolean;
   public usuarios = ["Erro 123456789!", "Dados não conferem"];
+  
   constructor(private router: Router){
     this.usuario = new Usuario();
 }
