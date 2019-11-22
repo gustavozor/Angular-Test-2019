@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Usuario } from 'src/app/model/usuario';
+import { Router } from '@angular/router';
 
 //decorator component
 @Component({
@@ -10,13 +11,16 @@ import { Usuario } from 'src/app/model/usuario';
 export class LoginComponent {
   public usuario;
   public usuarioAutenticado: boolean;
-  public usuarios = ["Erro Inventado!", "Dados não conferem"];
-  constructor(){
+  public usuarios = ["Erro 123456789!", "Dados não conferem"];
+  constructor(private router: Router){
     this.usuario = new Usuario();
 }
 
   entrar() {
-    debugger;
-      this.usuarioAutenticado = (this.usuario.email == "gustavozor@icloud.com" && this.usuario.senha == "123abc");
+    if (this.usuario.email == "gustavozor@icloud.com" && this.usuario.senha == "123abc")
+    {
+      localStorage.setItem("usuario-autenticado", "1");
+      //this.router.navigate(['/'])
+    }
   }
 }
