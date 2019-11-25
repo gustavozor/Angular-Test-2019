@@ -20,7 +20,7 @@ export class LoginComponent {
     if (this.usuario.email == "gustavozor@icloud.com" && this.usuario.senha == "123abc")
     {
       localStorage.setItem("usuario-autenticado", "1");
-      //this.router.navigate(['/'])
+      //this.router.navigate(['/']);
     }
   }
 }
