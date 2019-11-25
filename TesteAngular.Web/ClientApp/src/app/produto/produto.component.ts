@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./produto.component.css']
 })
 export class ProdutoComponent {
-  public names = ["Computador", " Celular", " Caneta"];
+  public names = ["Computador", " Celular", " Caneta", " Cigarro"];
 }
