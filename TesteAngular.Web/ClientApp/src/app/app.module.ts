@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { LoginComponent } from './usuario/login/login.component';
 import { GuardaRotas } from './autorizacao/guarda.rotas';
+import { ProdutoComponent } from 'src/produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GuardaRotas } from './autorizacao/guarda.rotas';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    LoginComponent
+    LoginComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,7 +31,8 @@ import { GuardaRotas } from './autorizacao/guarda.rotas';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [GuardaRotas] },
-      { path: 'entrar', component: LoginComponent }
+      { path: 'entrar', component: LoginComponent },
+      { path: 'produto', component: ProdutoComponent }
     ])
   ],
   providers: [],
